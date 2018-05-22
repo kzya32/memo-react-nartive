@@ -1,6 +1,20 @@
 # soccer-lecture
 
+## React Native Document
+
+    https://facebook.github.io/react-native/
+
+## Test by Expo
+
+    $ exp start --offline
+
+then, in new terminal tab
+
+    $ exp exp --offline
+
 ### cheetsheet
+
+#### eslint
 
     $ npm install --save-dev eslint babel-eslint eslint-config-airbnb
 
