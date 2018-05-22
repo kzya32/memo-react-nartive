@@ -2,7 +2,7 @@
 
 ## React Native Document
 
-    <https://facebook.github.io/react-native>
+<https://facebook.github.io/react-native/>
 
 ## Test by Expo
 
