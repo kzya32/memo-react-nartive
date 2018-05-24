@@ -13,7 +13,7 @@ export default class App extends React.Component {
           </View>
         </View>
 
-        <View style={styles.movielist}>
+        <View style={styles.movieList}>
           <View style={styles.movieListItem}>
             <Text style={styles.movieTitle}>ムービーのタイトル</Text>
             <Text style={styles.movieDate}>5/20/2018</Text>
@@ -24,8 +24,8 @@ export default class App extends React.Component {
           </View>
         </View>
 
-        <View>
-          <Text>+</Text>
+        <View style={styles.movieAddButton}>
+          <Text style={styles.movieAddButtonTitle}>+</Text>
         </View>
       </View>
 
@@ -38,18 +38,19 @@ export default class App extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#FFFDF6',
     alignItems: 'center',
     justifyContent: 'center',
     paddingTop: 78,
   },
-  movielist: {
+  movieList: {
     flex: 1,
     width: '100%',
   },
   movieListItem: {
     padding: 16,
     borderBottomWidth: 1,
+    backgroundColor: '#fff',
   },
   movieTitle: {
     fontSize: 18,
@@ -69,9 +70,34 @@ const styles = StyleSheet.create({
     backgroundColor: '#265366',
     justifyContent: 'center',
     alignItems: 'center',
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 0 },
+    shadowOpacity: 0.5,
+    shadowRadius: 3,
+    zIndex: 10,
   },
   appbarTitle: {
     color: '#fff',
     alignItems: 'center',
+  },
+  movieAddButton: {
+    position: 'absolute',
+    bottom: 32,
+    right: 32,
+    width: 48,
+    height: 48,
+    backgroundColor: '#E31676',
+    borderRadius: 48 * 0.5,
+    justifyContent: 'center',
+    alignContent: 'center',
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.2,
+    shadowRadius: 3,
+  },
+  movieAddButtonTitle: {
+    fontSize: 32,
+    lineHeight: 32,
+    color: '#fff',
   },
 });

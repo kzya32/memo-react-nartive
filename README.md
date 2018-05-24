@@ -14,6 +14,10 @@ then, in new terminal tab
 
 ### cheetsheet
 
+### screen navigation
+
+    $ npm install --save react-navigation
+
 #### eslint
 
     $ npm install --save-dev eslint babel-eslint eslint-config-airbnb
