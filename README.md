@@ -10,7 +10,7 @@
 
 then, in new terminal tab
 
-    $ exp exp --offline
+    $ exp ios --offline
 
 ### cheetsheet
 

@@ -1,31 +1,21 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
+import MemoList from './src/components/MemoList';
+import Appbar from './src/components/Appbar';
+
 // import BodyText from './src/elements/BodyText';
 
 export default class App extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <View style={styles.appbar}>
-          <View>
-            <Text style={styles.appbarTitle}>Movie Lecture</Text>
-          </View>
-        </View>
 
-        <View style={styles.movieList}>
-          <View style={styles.movieListItem}>
-            <Text style={styles.movieTitle}>ムービーのタイトル</Text>
-            <Text style={styles.movieDate}>5/20/2018</Text>
-          </View>
-          <View style={styles.movieListItem}>
-            <Text style={styles.movieTitle}>ムービーのタイトル</Text>
-            <Text style={styles.movieDate}>5/20/2018</Text>
-          </View>
-        </View>
-
-        <View style={styles.movieAddButton}>
-          <Text style={styles.movieAddButtonTitle}>+</Text>
+        <Appbar />
+        <MemoList />
+        
+        <View style={styles.memoAddButton}>
+          <Text style={styles.memoAddButtonTitle}>+</Text>
         </View>
       </View>
 
@@ -42,23 +32,6 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     paddingTop: 78,
-  },
-  movieList: {
-    flex: 1,
-    width: '100%',
-  },
-  movieListItem: {
-    padding: 16,
-    borderBottomWidth: 1,
-    backgroundColor: '#fff',
-  },
-  movieTitle: {
-    fontSize: 18,
-    marginBottom: 4,
-  },
-  movieDate: {
-    fontSize: 12,
-    color: '#a2a2a2',
   },
   appbar: {
     position: 'absolute',
@@ -80,7 +53,7 @@ const styles = StyleSheet.create({
     color: '#fff',
     alignItems: 'center',
   },
-  movieAddButton: {
+  memoAddButton: {
     position: 'absolute',
     bottom: 32,
     right: 32,
@@ -95,9 +68,11 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.2,
     shadowRadius: 3,
   },
-  movieAddButtonTitle: {
+  memoAddButtonTitle: {
     fontSize: 32,
     lineHeight: 32,
     color: '#fff',
+    // justifyContent: 'center',
+    // alignContent: 'center',
   },
 });
