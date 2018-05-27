@@ -1,19 +1,16 @@
 import React from 'react';
 import { StyleSheet, View } from 'react-native';
 
-import MemoList from './src/components/MemoList';
+import MemoListScreen from './src/screens/MemoListScreen.js';
+import MemoDetailScreen from './src/screens/MemoDetailScreen.js';
 import Appbar from './src/components/Appbar';
-import CircleButton from './src/elements/CircleButton';
-
-// import BodyText from './src/elements/BodyText';
 
 export default class App extends React.Component {
   render() {
     return (
       <View style={styles.container}>
         <Appbar />
-        <MemoList />
-        <CircleButton>+</CircleButton>
+        <MemoDetailScreen />
       </View>
     );
   }
