@@ -10,7 +10,7 @@ class MemoList extends React.Component {
           <Text style={styles.memoDate}>5/20/2018</Text>
         </View>
         <View style={styles.memoListItem}>
-          <Text style={styles.memoTitle}>ムービータイトル</Text>
+          <Text style={styles.memoTitle}>ムービー</Text>
           <Text style={styles.memoDate}>5/20/2018</Text>
         </View>
       </View>
