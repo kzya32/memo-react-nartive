@@ -1,7 +1,21 @@
 import React from 'react';
 import { StyleSheet, View, Text } from 'react-native';
+import { Font } from 'expo';
+
+import fontAwesome from '../../assets/fonts/fontawesome-webfont.ttf';
 
 class CircleButton extends React.Component {
+  state = {
+    fontLoaded: false,
+  }
+
+  async componentWillMount() {
+    await Font.loadAsync({
+      FontAwesome: fontAwesome,
+    });
+    this.setState({ fontLoaded: true });
+  }
+
   render() {
     const { style, color } = this.props;
 
@@ -9,35 +23,34 @@ class CircleButton extends React.Component {
     let textColor = '#fff';
 
     if (color === 'white') {
-      bgColor = '#fff'
-      textColor = '#E31676'
+      bgColor = '#fff';
+      textColor = '#E31676';
     }
 
     return (
-      <View style={[styles.circleButton, style, {backgroundColor: bgColor }]}>
-        <Text style={[styles.circleButtonTitle, { color: textColor }]}>
-          {this.props.children}
-        </Text>
+      <View style={[styles.circleButton, style, { backgroundColor: bgColor }]}>
+        {
+          this.state.fontLoaded ? (
+            <Text style={[styles.circleButtonTitle, { color: textColor }]}>
+              {this.props.children}
+            </Text>
+          ) : null
+        }
       </View>
     );
   }
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#FFFDF6',
-    alignItems: 'center',
-    justifyContent: 'center',
-    paddingTop: 78,
-  },
   circleButton: {
+    fontFamily: 'FontAwesome',
     position: 'absolute',
     bottom: 32,
     right: 32,
     width: 48,
     height: 48,
-    borderRadius: 48 * 0.5,
+    borderRadius: 24,
+    // borderRadius: 48 * 0.5,
     justifyContent: 'center',
     alignContent: 'center',
     shadowColor: '#000',
@@ -46,8 +59,8 @@ const styles = StyleSheet.create({
     shadowRadius: 3,
   },
   circleButtonTitle: {
-    fontSize: 32,
-    lineHeight: 32,
+    fontSize: 24,
+    lineHeight: 24,
     // justifyContent: 'center',
     // alignContent: 'center',
   },

@@ -4,6 +4,10 @@
 
 <https://facebook.github.io/react-native/>
 
+## Font Awesome
+
+<https://fontawesome.com/v4.7.0/>
+
 ## Test by Expo
 
     $ exp start --offline
