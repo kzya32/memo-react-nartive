@@ -8,8 +8,8 @@ class MemoEditScreen extends React.Component {
     return (
       <View style={styles.container}>
         <TextInput style={styles.memoEditInput} value="Hi" multiline />
-        <CircleButton color="white" >
-          { '\uf00c' }
+        <CircleButton>
+          +
         </CircleButton>
       </View>
     );
@@ -22,17 +22,15 @@ const styles = StyleSheet.create({
     width: '100%',
     alignItems: 'center',
     justifyContent: 'flex-start',
-    paddingTop: 32,
-    paddingLeft: 16,
-    paddingRight: 16,
-    paddingBottom: 16,
   },
   memoEditInput: {
+    paddingTop: 32,
     paddingLeft: 20,
     paddingRight: 20,
     paddingBottom: 20,
     backgroundColor: '#fff',
     flex: 1,
+    width: '100%',
   },
 });
 

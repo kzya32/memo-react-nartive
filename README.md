@@ -18,7 +18,7 @@ then, in new terminal tab
 
 ### cheetsheet
 
-### screen navigation
+### screen navigation (including tab, mordal...)
 
     $ npm install --save react-navigation
 

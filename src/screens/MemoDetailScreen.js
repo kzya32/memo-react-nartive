@@ -17,14 +17,16 @@ class MemoDetailScreen extends React.Component {
           <Text>中身</Text>
         </View>
 
-        <CircleButton color="white" style={styles.editButton}>
-          { '\uf040' }
+        <CircleButton color="white" style={styles.editButton} onPress={() => {this.props.navigation.navigate('MemoEdit')}}>
+          +
         </CircleButton>
+
 
       </View>
     );
   }
 }
+// { '\uf040' }
 
 const styles = StyleSheet.create({
   container: {
@@ -56,7 +58,7 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   editButton: {
-    top: 75,
+    top: 36,
   },
 });
 
